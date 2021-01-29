@@ -24,7 +24,7 @@ type DrawContext struct {
 	UpperLeft image.Point // (x1, y1)
 	W, H      int
 
-	color color.Color
+	Color color.Color
 }
 
 // rectangle IShape
