@@ -162,7 +162,7 @@ func draw(mat matrix.Matrix, opt *outputImageOptions) image.Image {
 			X: x*opt.qrBlockWidth() + _defaultPadding,
 			Y: y*opt.qrBlockWidth() + _defaultPadding,
 		}
-		ctx.color = opt.stateRGBA(v)
+		ctx.Color = opt.stateRGBA(v)
 		// DONE(@yeqown): make this abstract to Shapes
 		shape.Draw(ctx)
 
