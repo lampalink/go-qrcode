@@ -3,7 +3,7 @@ package qrcode
 import (
 	"testing"
 
-	"github.com/yeqown/go-qrcode/matrix"
+	"github.com/lampalink/go-qrcode/matrix"
 )
 
 func TestMask(t *testing.T) {

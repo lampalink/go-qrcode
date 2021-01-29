@@ -5,7 +5,7 @@ import (
 	"image"
 	"image/color"
 
-	"github.com/yeqown/go-qrcode/matrix"
+	"github.com/lampalink/go-qrcode/matrix"
 )
 
 // _defaultOutputOption default output image background color and etc options

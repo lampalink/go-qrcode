@@ -1,4 +1,4 @@
-module github.com/yeqown/go-qrcode
+module github.com/lampalink/go-qrcode
 
 require (
 	github.com/fogleman/gg v1.3.0

@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/yeqown/go-qrcode/matrix"
+	"github.com/lampalink/go-qrcode/matrix"
 )
 
 func Test_image_draw(t *testing.T) {

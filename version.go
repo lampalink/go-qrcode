@@ -5,7 +5,7 @@ import (
 	"log"
 
 	// "github.com/skip2/go-qrcode/bitset"
-	"github.com/yeqown/reedsolomon/binary"
+	"github.com/lampalink/reedsolomon/binary"
 )
 
 // ecLevel error correction level

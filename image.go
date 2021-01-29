@@ -10,7 +10,7 @@ import (
 
 	"github.com/fogleman/gg"
 
-	"github.com/yeqown/go-qrcode/matrix"
+	"github.com/lampalink/go-qrcode/matrix"
 )
 
 // Draw image with matrix
@@ -78,7 +78,7 @@ func drawAndSave(w io.Writer, m matrix.Matrix, opt *outputImageOptions) (err err
 //	}
 //
 //	ctx := &DrawContext{
-//		upperLeft:  image.Point{}, // useless
+//		UpperLeft:  image.Point{}, // useless
 //		lowerRight: image.Point{}, // useless
 //		img:        rgba,
 //		color:      color.Black, // useless
@@ -88,7 +88,7 @@ func drawAndSave(w io.Writer, m matrix.Matrix, opt *outputImageOptions) (err err
 //	// iterate the matrix to Draw each pixel
 //	mat.Iterate(matrix.ROW, func(x int, y int, v matrix.State) {
 //		// Draw the block
-//		ctx.upperLeft = image.Point{
+//		ctx.UpperLeft = image.Point{
 //			X: x*opt.qrBlockWidth() + _defaultPadding,
 //			Y: y*opt.qrBlockWidth() + _defaultPadding,
 //		}
@@ -105,8 +105,8 @@ func drawAndSave(w io.Writer, m matrix.Matrix, opt *outputImageOptions) (err err
 //	if opt.logoImage() != nil {
 //		// Draw logo image into rgba
 //		bound := opt.logo.Bounds()
-//		upperLeft, lowerRight := bound.Min, bound.Max
-//		logoWidth, logoHeight := lowerRight.X-upperLeft.X, lowerRight.Y-upperLeft.Y
+//		UpperLeft, lowerRight := bound.Min, bound.Max
+//		logoWidth, logoHeight := lowerRight.X-UpperLeft.X, lowerRight.Y-UpperLeft.Y
 //
 //		if !validLogoImage(w, h, logoWidth, logoHeight) {
 //			log.Printf("w=%d, h=%d, logoW=%d, logoH=%d, logo is over than 1/5 of QRCode \n",
@@ -118,8 +118,8 @@ func drawAndSave(w io.Writer, m matrix.Matrix, opt *outputImageOptions) (err err
 //		// which point(xOffset, yOffset) should icon upper-left to start
 //		xOffset, yOffset := (w-logoWidth)/2, (h-logoHeight)/2
 //
-//		for posX := upperLeft.X; posX < lowerRight.X; posX++ {
-//			for posY := upperLeft.Y; posY < lowerRight.Y; posY++ {
+//		for posX := UpperLeft.X; posX < lowerRight.X; posX++ {
+//			for posY := UpperLeft.Y; posY < lowerRight.Y; posY++ {
 //				rgba.Set(posX+xOffset, posY+yOffset, opt.logo.At(posX, posY))
 //			}
 //		}
@@ -148,17 +148,17 @@ func draw(mat matrix.Matrix, opt *outputImageOptions) image.Image {
 	// qrcode block draw context
 	ctx := &DrawContext{
 		Context:   dc,
-		upperLeft: image.Point{},
-		w:         opt.qrBlockWidth(),
-		h:         opt.qrBlockWidth(),
-		color:     color.Black,
+		UpperLeft: image.Point{},
+		W:         opt.qrBlockWidth(),
+		H:         opt.qrBlockWidth(),
+		Color:     color.Black,
 	}
 	shape := opt.getShape()
 
 	// iterate the matrix to Draw each pixel
 	mat.Iterate(matrix.ROW, func(x int, y int, v matrix.State) {
 		// Draw the block
-		ctx.upperLeft = image.Point{
+		ctx.UpperLeft = image.Point{
 			X: x*opt.qrBlockWidth() + _defaultPadding,
 			Y: y*opt.qrBlockWidth() + _defaultPadding,
 		}

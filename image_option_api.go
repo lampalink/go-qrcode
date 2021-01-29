@@ -8,7 +8,7 @@ import (
 	"image/png"
 	"os"
 
-	"github.com/yeqown/go-qrcode/matrix"
+	"github.com/lampalink/go-qrcode/matrix"
 )
 
 type ImageOption interface {

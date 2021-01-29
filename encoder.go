@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/yeqown/reedsolomon/binary"
+	"github.com/lampalink/reedsolomon/binary"
 )
 
 // encMode ...

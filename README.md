@@ -1,6 +1,6 @@
 # go-qrcode #
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/yeqown/go-qrcode)](https://goreportcard.com/report/github.com/yeqown/go-qrcode) [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/yeqown/go-qrcode)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lampalink/go-qrcode)](https://goreportcard.com/report/github.com/lampalink/go-qrcode) [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/lampalink/go-qrcode)
 
 <img src="./qrcode.jpeg" width="100px" align="right"/>
 QR code (abbreviated from Quick Response Code) is the trademark for a type of matrix barcode (or two-dimensional barcode) first designed in 1994 for the automotive industry in Japan. A barcode is a machine-readable optical label that contains information about the item to which it is attached. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used
@@ -22,7 +22,7 @@ QR code (abbreviated from Quick Response Code) is the trademark for a type of ma
 ### Install
 
 ```sh
-go get -u github.com/yeqown/go-qrcode
+go get -u github.com/lampalink/go-qrcode
 ```
 
 ### Usage
@@ -34,11 +34,11 @@ package main
 import (
 	"fmt"
 
-	qrcode "github.com/yeqown/go-qrcode"
+	qrcode "github.com/lampalink/go-qrcode"
 )
 
 func main() {
-	qrc, err := qrcode.New("https://github.com/yeqown/go-qrcode")
+	qrc, err := qrcode.New("https://github.com/lampalink/go-qrcode")
 	if err != nil {
 		fmt.Printf("could not generate QRCode: %v", err)
 	}
@@ -108,7 +108,7 @@ following are some shots:
 
 ### Documention
 
-Jump to [go.dev/github/yeqown/go-qrcode](https://godoc.org/github.com/yeqown/go-qrcode)
+Jump to [go.dev/github/yeqown/go-qrcode](https://godoc.org/github.com/lampalink/go-qrcode)
 
 ### Links
 
