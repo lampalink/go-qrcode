@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/lampalink/reedsolomon/binary"
+	"github.com/yeqown/reedsolomon/binary"
 )
 
 // func Test_load(t *testing.T) {

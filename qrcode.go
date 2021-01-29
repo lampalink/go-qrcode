@@ -9,8 +9,8 @@ import (
 	"sync"
 
 	"github.com/lampalink/go-qrcode/matrix"
-	"github.com/lampalink/reedsolomon"
-	"github.com/lampalink/reedsolomon/binary"
+	"github.com/yeqown/reedsolomon"
+	"github.com/yeqown/reedsolomon/binary"
 )
 
 var (
