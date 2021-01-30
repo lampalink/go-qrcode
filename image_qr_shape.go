@@ -24,6 +24,9 @@ type DrawContext struct {
 	UpperLeft image.Point // (x1, y1)
 	W, H      int
 
+	MatrixW, MatrixH int
+	CursorX, CursorY int
+
 	Color color.Color
 }
 

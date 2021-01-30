@@ -152,12 +152,16 @@ func draw(mat matrix.Matrix, opt *outputImageOptions) image.Image {
 		W:         opt.qrBlockWidth(),
 		H:         opt.qrBlockWidth(),
 		Color:     color.Black,
+		MatrixW:   mat.Width(),
+		MatrixH:   mat.Height(),
 	}
 	shape := opt.getShape()
 
 	// iterate the matrix to Draw each pixel
 	mat.Iterate(matrix.ROW, func(x int, y int, v matrix.State) {
 		// Draw the block
+		ctx.CursorX = x
+		ctx.CursorY = y
 		ctx.UpperLeft = image.Point{
 			X: x*opt.qrBlockWidth() + _defaultPadding,
 			Y: y*opt.qrBlockWidth() + _defaultPadding,
